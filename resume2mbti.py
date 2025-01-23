@@ -3,7 +3,6 @@ import requests
 import base64
 
 def image_2_question(image_path):
-    # OpenAI API Key
     api_key =  "API_KEY"
     # Function to encode the image
     def encode_image(path):
@@ -18,7 +17,7 @@ def image_2_question(image_path):
         "Authorization": f"Bearer {api_key}"
     }
     payload = {
-        "model": "gpt-4o-2024-11-20",
+        "model": "gpt-4o-2024-11-20",  # choose your own model
         "messages": [
             {
                 "role": "user",
@@ -47,4 +46,4 @@ def image_2_question(image_path):
     return response.json()['choices'][0]['message']['content']
 
 # 测试
-print(image_2_question("Joyce.png"))
+print(image_2_question("IMAGE_PATH"))

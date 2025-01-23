@@ -17,7 +17,7 @@ def image_2_question(image_path):
         "Authorization": f"Bearer {api_key}"
     }
     payload = {
-        "model": "gpt-4o-2024-11-20",  # choose your own model
+        "model": "gpt-4o",  # choose your own model
         "messages": [
             {
                 "role": "user",

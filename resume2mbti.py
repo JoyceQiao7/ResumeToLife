@@ -4,7 +4,7 @@ import base64
 
 def image_2_question(image_path):
     # OpenAI API Key
-    api_key = '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' # 在此输入API密钥
+    api_key =  "API_KEY"
     # Function to encode the image
     def encode_image(path):
         with open(path, "rb") as image_file:
@@ -45,5 +45,6 @@ def image_2_question(image_path):
     }
     response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
     return response.json()['choices'][0]['message']['content']
+
 # 测试
 print(image_2_question("Joyce.png"))
